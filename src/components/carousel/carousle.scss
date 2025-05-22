@@ -1,0 +1,87 @@
+@use "../../assets/colors/colors.scss" as vars;
+
+.mySwiper {
+  width: 100%;
+  height: 600px;
+  border-radius: 30px;
+
+  .img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    img {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+      z-index: 1;
+    }
+  }
+
+  .txt-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    color: vars.$light-green;
+    z-index: 5;
+    transform: translate(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      text-align: center;
+      font-size: 100px;
+    }
+    a {
+      width: 250px;
+
+      .a-wrapper {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border: 2px solid vars.$green;
+        color: vars.$green;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: 0.5s ease;
+        span {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 0px;
+          height: 100%;
+          background-color: vars.$green;
+          transition: 0.5s ease;
+          z-index: -1;
+        }
+        &:hover {
+          color: vars.$white;
+          span {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

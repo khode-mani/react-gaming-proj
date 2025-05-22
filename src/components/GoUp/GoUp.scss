@@ -1,0 +1,37 @@
+@use '../../assets/colors/colors.scss' as vars;
+
+
+.go-up{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: vars.$black;
+    color: vars.$black;
+    border: 3px solid vars.$light-green;
+    transition: all .5s ease;
+    z-index: 200;
+    right: 50px;
+    cursor: pointer;
+    
+    @media (max-width : 1000px) {
+        right: 30px;
+    }
+    .arrow{
+        font-size: 30px;
+        color: vars.$light-green;
+        transition: all .5s ease;
+
+    }
+    &:hover{
+        transform: scale(1.2);
+        
+        .arrow{
+            color: vars.$light-green;
+            filter: drop-shadow(0 -5px 0 vars.$light-green);
+        }
+    }
+}

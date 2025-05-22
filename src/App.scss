@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: pay2;
+    src: url(/assets/font/PeydaPro/PeydaWeb-Bold.woff2)
+}
+@font-face {
+    font-family: pay3;
+    src: url(/assets/font/PeydaPro/PeydaWeb-Black.woff2)
+}
+
+@font-face {
+    font-family: en;
+    src: url(./assets/fonts/migra/MigraItalic-ExtraboldItalic.ttf);
+}
+@font-face {
+    font-family: en2;
+    src: url(./assets/fonts/tusker/tusker.woff2);
+}
+
+
+$white: #fffafb;
+$light-green : #7de2d1;
+$green: #339989;
+$gray: #2b2c28;
+$black: #131515;
+
+
+
+
+
+
+html{
+    scrollbar-width: thin;
+}
+body{
+    background-color: $black !important;
+    font-family: pay2 !important ;
+    overflow-x: hidden;
+}
+.pay2{
+    font-family: pay2 !important;
+}
+.pay3{
+    font-family: pay3 !important;
+}
+.en{
+    font-family: en;
+}
+.en2{
+    font-family: en2;
+}
+a{
+    text-decoration: none !important;
+}
